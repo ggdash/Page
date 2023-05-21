@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+    <header class="d-flex">
+        <div class="container d-flex">   
+            <a href="#">
+                <img class="logo" src="./assets/img/logo.svg" alt="Website Logo">
+            </a>
+        <nav class="d-flex">
+            <div>
+            <a href="#">Main</a>
+            <a href="#">Help</a>
+            <a href="blog-list.html">Blog</a>
+            <a href="#">Rules</a>
+            <a href="#">Contact</a>
+            </div>
+            <div>
+                 <a href="./registration.html">Registration</a>
+                <a href="./auth.html">Log in</a>
+            </div>        
+        </nav>
+    </div>
+    </header>
+
+
+    <div class="container body-container">
+     <div class="auth-form-container">
+      <form action="" method="get ">
+     	 <div class="form-group">
+     	 	<label class="text-input-label" for="firstName">Name</label>
+     	 	<input class="text-input" type="text" name="firstName" id="firstName" placeholder="Enter your name">
+         </div>
+
+             <div class="form-group">
+        <label class="text-input-label" for="lastName">Last name</label>
+        <input class="text-input" type="text" name="lastName" id="lastName" placeholder="Enter Your last name">
+         </div>
+
+         <div class="form-group">
+        <label class="text-input-label" for="birthDate">Date of birth</label>
+        <input class="text-input" type="date" name="birthDate" id="birthDate" placeholder="Enter your birth date">
+         </div>
+
+          <div class="form-group">
+        <label class="text-input-label" for="userEmail">E-mail of user</label>
+        <input class="text-input" type="email" name="userEmail" id="userEmail" placeholder="Enter your e-mail">
+         </div>
+
+             <div class="form-group">
+        <label class="text-input-label" for="birthDate">Place of birth</label>
+            <select class="locations">
+                <option>Georgia</option>
+               
+
+            </select>
+
+
+            </div>
+
+
+           <div class="form-group">
+            <div class="sex-container">
+            <input type="radio" name="sex" id="male">
+             <label for="male">Man</label>
+            </div>
+            <div class="sex-container">
+              <input type="radio" name="sex" id="famale">
+             <label for="famale">Women</label>
+            </div>
+           </div>
+
+            <div class="form-group">
+          	<label class="text-input-label" for="pass1">Password</label>
+          	<input class="text-input" type="password1" name="pass1" id="pass1" placeholder="Enter your password">
+            </div>
+           <div class="form-group">
+            <label class="text-input-label" for="pass2">Repeat the password</label>
+            <input class="text-input" type="password2" name="pass2" id="pass2" placeholder="Repeat the password">
+            </div>
+            <script>
+                    function checkPasswords() {
+                        const pass1 = document.getElementById('pass1').value;
+                        const pass2 = document.getElementById('pass2').value;
+                            
+                        if (pass1 !== pass2) {
+                                    alert('Password do not much!');
+                                    }
+                                }
+            </script>
+            
+
+            <button onclick="checkPasswords()" onclick="alert('Congratulations, you have successfully registered')" class="btn btn-primary w-100 mb-15">Registration</button>
+     	      <a class="btn btn-link" href="./auth.html">Authorization</a>
+           </form>
+           </div>
+
+   </div>
+ 
+</body>
+</html>
